@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/topside.css">
+    <link rel="stylesheet" href="css/applicant.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Dashboard Sidebar Menu</title> 
+</head>
+<body>
+    <!-------TOPBAR------->
+    <div class = "topbar">
+        <div class="logo-container">
+            <img src="https://www.pngkey.com/png/detail/52-528919_the-pup-logo-polytechnic-university-of-the-philippines.png" alt="">
+            <h1>PUP<br> JobFair Portal</h1>
+            <div class = "topright">
+            <ul>
+                <li><button>Create Job Posting</button></li>
+                <li><i class = 'bx bx-bell icon'></i></li>
+                <li><i class = 'bx bx-power-off icon'></i></li>
+            </ul>
+            </div>
+        </div>
+
+
+    <!------SIDEBAR------>
+    <nav class="sidebar close">
+        <header>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    </li>
+
+                <div class="pic">
+                    <img src = "img/pic.jpg">
+                </div>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="profile.html">
+                            <i class='bx bx-user-circle icon' ></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="manage.html">
+                            <i class='bx bx-edit-alt icon'></i>
+                            <span class="text nav-text">Manage Account</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="applicants.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Applicants</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="jobpost.html">
+                            <i class='bx bx-briefcase icon' ></i>
+                            <span class="text nav-text">Job Postings</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="messages.html">
+                            <i class='bx bx-message-dots icon'></i>
+                            <span class="text nav-text">Messages</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="settings.html">
+                        <i class='bx bx-cog icon' ></i>
+                        <span class="text nav-text">Settings</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+    </div>
+    </nav>
+
+    <!-----content----->
+<div class="mainbody">
+    <div class="filter">
+        <div class="box1">
+            <span>Filters</span>
+            <label class="container">New Candidates
+                <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Processing
+                <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Hired
+                <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Archived
+                <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="  Search by Keyword " name="search">
+                  <button type="submit"><img src="img/search.svg.svg"></button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="box2">
+            <span>Select Group Action</span>
+            <label class="container">Download Resume
+                <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Invite all
+                <input type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Archived
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <div class="main">
+        <div class="title">
+        <span>Applicants</span>
+        </div>
+        <div class="inner">
+          <table>
+              <tbody>
+                  <th>
+                      <tr>
+                        <th id="btn-select-all"> <input type="checkbox" onclick="toggle(this);" /> 
+                           Select All
+                        </th>
+                        <th>  </th>
+                          <th><span>Applicant</span></th>
+                          <th><span class="email">Email:</span></th>
+                          <th><span class="area">Position Applied</span></th>
+                          <th> <span class="stat">Status</span></th>
+                      </tr>
+                  </th>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1" >
+                            <i class='bx bxs-caret-down-circle' onclick="myFunction()"></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1">
+                            <i class='bx bxs-caret-down-circle'></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1">
+                            <i class='bx bxs-caret-down-circle'></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1">
+                            <i class='bx bxs-caret-down-circle'></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1">
+                            <i class='bx bxs-caret-down-circle'></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1">
+                            <i class='bx bxs-caret-down-circle'></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1">
+                            <i class='bx bxs-caret-down-circle'></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1">
+                            <i class='bx bxs-caret-down-circle'></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr class="box">
+                    <td><input type=checkbox name=chk value=chk1 required></td>
+                    <td><img src="img/pic.jpg" class="img img-fluid logo "></td>
+                    <td><span>John Smith</span></td>
+                    <td><span>johnsmith@gmail.com</span></td>
+                    <td><span>software Engineer</span></td>
+                    <td><span>New Applicant</span></td>
+                    <td><button  id="inv"class="btn_inv">Invite</button></td>
+                    <td>
+                        <div class="dropdown1">
+                            <i class='bx bxs-caret-down-circle'></i>
+                            <div class="dropdown-content1">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </td>
+                  </tr>
+                 
+              </tbody>
+          </table>
+        </div>  
+    </div>
+</div>
+<!-----content(END)----->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
